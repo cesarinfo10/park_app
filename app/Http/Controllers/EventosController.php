@@ -31,7 +31,8 @@ class EventosController extends Controller
      */
     public function create()
     {
-        //
+        $mensajecreate= Mensaje::create($request->all());
+        return $mensajecreate;
     }
 
     /**
