@@ -16,6 +16,7 @@ class CreateCalificacionesTable extends Migration
         Schema::create('calificaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('calificacion');
+            $table->integer('eventos_id');
             $table->datetime('fecha_hora');
             $table->integer('estado');
             $table->timestamps();
