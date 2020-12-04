@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Evento;
 class EventosController extends Controller
 {
     /**
@@ -31,8 +31,8 @@ class EventosController extends Controller
      */
     public function create()
     {
-        $mensajecreate= Mensaje::create($request->all());
-        return $mensajecreate;
+        $eventoscreate= Evento::create($request->all());
+        return $eventoscreate;
     }
 
     /**
@@ -86,7 +86,8 @@ class EventosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $eventosupdate = Evento::findOrFail($id)->update($request->all());
+        return $eventosupdate;
     }
 
     /**
@@ -97,6 +98,7 @@ class EventosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $eventosdelete=Evento::findOrFail($id)->delete();
+        return $eventosdelete;
     }
 }
