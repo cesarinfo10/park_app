@@ -35,6 +35,7 @@ Route::resource('cat', 'CategoriasController');
 Route::resource('noti', 'NotificacionesController');
 // Estado
 Route::resource('estado', 'EstadoController');
+// Lugares
+Route::resource('lugares', 'LugaresController');
 // Eventos
 Route::resource('evento', 'EventosController');
-
